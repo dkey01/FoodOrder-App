@@ -36,7 +36,7 @@ const CheckOutForm = (props) => {
         valueChangeHandler: postalCodeChangeHandler,
         onBlurValueHandler: onBlurPostalCodeHandler,
         valueClass: postalCodeClass,
-        reset: resetPostalCode} = useInput(value => value.trim().length === 5, value=> value ? classes['form-invalid'] : classes['form-valid']);
+        reset: resetPostalCode} = useInput(value => value.trim().length === 6, value=> value ? classes['form-invalid'] : classes['form-valid']);
 
     const {
         value: cityEntered,
@@ -83,7 +83,7 @@ const CheckOutForm = (props) => {
             <div className = {postalCodeClass}>
                 <label htmlFor='postalCode'>Postal Code</label>
                 <input type='text' id='postalCode' onChange={postalCodeChangeHandler} onBlur={onBlurPostalCodeHandler} value={postalCodeEntered}/>
-                {postalCodeHasError && <p>Please enter a valid postal code(must be 5 characters)</p>}
+                {postalCodeHasError && <p>Please enter a valid postal code(must be 6 characters)</p>}
             </div>
             <div className = {cityClass}>
                 <label htmlFor='city'>City</label>
