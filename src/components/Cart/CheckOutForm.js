@@ -72,7 +72,7 @@ const CheckOutForm = (props) => {
         <form className={classes.form} onSubmit={formSubmitHandler}>
             <div className = {nameClass}>
                 <label htmlFor='name'>Full name</label>
-                <input type='text' placeholder='First name Last name' id='name'onChange={fullNameChangeHandler} onBlur={onBlurFullNameHandler} value={nameEntered}/>
+                <input type='text' id='name'onChange={fullNameChangeHandler} onBlur={onBlurFullNameHandler} value={nameEntered}/>
                 {nameHasError && <p>Please name must be entered</p>}
             </div>
             <div className = {streetClass}>
